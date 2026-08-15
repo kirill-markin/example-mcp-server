@@ -105,7 +105,7 @@ After installation, you can connect the server directly to Cursor IDE:
 7. Fill in the form:
    - Name: Choose any name (e.g., "my-mcp-server-1")
    - Type: Select "stdio" (not "sse" because we run the server locally)
-   - Command: Paste the absolute path to `cursor-run-mcp-server.sh` that you copied earlier. For example: `/Users/kirillmarkin/weaviate-mcp-server/cursor-run-mcp-server.sh`
+   - Command: Paste the absolute path to `cursor-run-mcp-server.sh` that you copied earlier. For example: `/Users/yourname/weaviate-mcp-server/cursor-run-mcp-server.sh`
 
 ### Environment Variables
 
