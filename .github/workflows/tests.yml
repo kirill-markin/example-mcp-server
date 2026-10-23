@@ -16,16 +16,14 @@ jobs:
         
     - name: Install uv
       run: |
-        curl -LsSf https://astral.sh/uv/install.sh | sh
-        echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+        curl -LsSf https://astral.sh/uv/0.13.4/install.sh | sh
+        echo "$HOME/.local/bin" >> $GITHUB_PATH
         
     - name: Create virtual environment and install dependencies
       run: |
-        uv venv
-        . .venv/bin/activate
-        uv pip install -e ".[dev]"
+        uv sync --locked --extra dev
         
     - name: Run tests
       run: |
         . .venv/bin/activate
-        uv run pytest tests/ -v 
+        uv run --locked pytest tests/ -v
